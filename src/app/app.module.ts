@@ -1,3 +1,5 @@
+import { OrderService } from './order/order.service';
+import { OrderItemsComponent } from './order/order-items/order-items.component';
 import { RadioComponent } from './shared/radio/radio.component';
 import { InputComponent } from './shared/input/input.component';
 import { ShoppingCartService } from './restaurant-detail/shopping-cart/shopping-cart.service';
@@ -39,7 +41,8 @@ import { OrderComponent } from './order/order.component';
     ReviewsComponent,
     OrderComponent,
     InputComponent,
-    RadioComponent
+    RadioComponent,
+    OrderItemsComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +53,7 @@ import { OrderComponent } from './order/order.component';
   providers: [
     RestaurantService,
     ShoppingCartService,
+    OrderService,
     { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   bootstrap: [AppComponent]
