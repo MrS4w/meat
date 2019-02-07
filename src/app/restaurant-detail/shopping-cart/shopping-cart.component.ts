@@ -1,4 +1,3 @@
-import { CartItem } from './cart-item.model';
 import { ShoppingCartService } from './shopping-cart.service';
 import { Component, OnInit } from '@angular/core';
 
