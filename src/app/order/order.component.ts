@@ -49,6 +49,7 @@ export class OrderComponent implements OnInit {
       .map((item: CartItem) => new OrderItem(item.quantity, item.menuItem.id))
     this.orderService.checkOrder(order).subscribe(() => {
       this.router.navigate(['/order-summary'])
-      this.orderService.clear()})
+      this.orderService.clear()
+    })
   }
 }
