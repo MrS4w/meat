@@ -4,7 +4,6 @@
 
 <section class="content">
   <section class="invoice">
-    {{form.value | json}}
     <form #form="ngForm" novalidate>
       <div class="row">
         <div class="col-xs-12">
@@ -32,7 +31,7 @@
 
           <div class="col-sm-3 col-xs-6">
             <mt-input-container>
-              <input type="text" class="form-control" name="optional" ngModel placeholder="Complemento">
+              <input type="text" class="form-control" name="optionalAddress" ngModel placeholder="Complemento">
             </mt-input-container>
           </div>
           <!-- /.col -->
@@ -75,8 +74,8 @@
 
     <div class="row">
       <div class="col-xs-12">
-        <button href="order-summary.html" [disabled]="!form.valid || cartItems().length === 0" class="btn btn-success pull-right"><i
-            class="fa fa-credit-card"></i>
+        <button (click)="checkOrder(form.value)" href="order-summary.html" [disabled]="!form.valid || cartItems().length === 0"
+          class="btn btn-success pull-right"><i class="fa fa-credit-card"></i>
           Concluir
           Pedido
         </button>

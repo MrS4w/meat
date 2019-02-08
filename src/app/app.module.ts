@@ -25,6 +25,7 @@ import { RestaurantComponent } from './restaurants/restaurant/restaurant.compone
 import { RestaurantService } from './restaurants/restaurants.service';
 import { RestaurantDetailComponent } from './restaurant-detail/restaurant-detail.component';
 import { OrderComponent } from './order/order.component';
+import { OrderSummaryComponent } from './order-summary/order-summary.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { OrderComponent } from './order/order.component';
     InputComponent,
     RadioComponent,
     OrderItemsComponent,
-    DeliveryCostsComponent
+    DeliveryCostsComponent,
+    OrderSummaryComponent
   ],
   imports: [
     BrowserModule,
